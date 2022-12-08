@@ -7,12 +7,21 @@ import './App.css';
 
 import Routes from './Routes';
 
+import { Template } from './components/MainComponents';
+import  Header  from './components/partials/Header/Index';
+import  Footer  from './components/partials/Footer';
+
 function App() {
 const user = useSelector((state: RootState) => state.user);
 
   return (
     <BrowserRouter>
-     <Routes />
+      <Template>
+        <Header />
+        <Routes />
+        <Footer />
+      </Template>
+     
     </BrowserRouter>
     
   );
